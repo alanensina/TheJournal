@@ -65,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
                         article.setContent(jsonObject.getString("content"));
                         // Need to check how to verify the object Tags
                         //article.setTags(jsonObject.getString("tags"));
+                        article.setTags(new Tags(jsonObject.getJSONObject("tags").getInt("id"),
+                                jsonObject.getJSONObject("tags").getString("label")));
                         article.setImg_url(jsonObject.getString("image_url"));
 
                         listArticles.add(article);
