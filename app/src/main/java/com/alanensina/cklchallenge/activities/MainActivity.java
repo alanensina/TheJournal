@@ -49,24 +49,26 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(JSONArray response) {
 
                 JSONObject jsonObject = null;
+                //List<Tags> tags = null;
+                //Tags tag = null;
 
-                for(int i = 0 ; i < response.length(); i++){
+                for (int i = 0; i < response.length(); i++) {
 
                     try {
 
                         jsonObject = response.getJSONObject(i);
                         Articles article = new Articles();
-                        Tags tags = new Tags();
+
 
                         article.setTitle(jsonObject.getString("title"));
                         article.setWebsite(jsonObject.getString("website"));
                         article.setAuthors(jsonObject.getString("authors"));
                         article.setDate(jsonObject.getString("date"));
                         article.setContent(jsonObject.getString("content"));
-                        // Need to check how to verify the object Tags
-                        //article.setTags(jsonObject.getString("tags"));
-                        article.setTags(new Tags(jsonObject.getJSONObject("tags").getInt("id"),
-                                jsonObject.getJSONObject("tags").getString("label")));
+                        //article.setTags(new Tags(jsonObject.getJSONObject("tags").getInt("id"),
+                        //  jsonObject.getJSONObject("tags").getString("label")));
+
+
                         article.setImg_url(jsonObject.getString("image_url"));
 
                         listArticles.add(article);

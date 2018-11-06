@@ -1,21 +1,23 @@
 package com.alanensina.cklchallenge.model;
 
+import java.util.List;
+
 public class Articles {
 
     private String title, website, authors, date, content, img_url;
-    private Tags tags;
+    private List<Tags> tags;
 
-    public Articles(String title, String website, String authors, String date, String content, Tags tags, String img_url) {
+    public Articles() {
+    }
+
+    public Articles(String title, String website, String authors, String date, String content, String img_url, List<Tags> tags) {
         this.title = title;
         this.website = website;
         this.authors = authors;
         this.date = date;
         this.content = content;
-        this.tags = tags;
         this.img_url = img_url;
-    }
-
-    public Articles() {
+        this.tags = tags;
     }
 
     public String getTitle() {
@@ -58,14 +60,6 @@ public class Articles {
         this.content = content;
     }
 
-    public Tags getTags() {
-        return tags;
-    }
-
-    public void setTags(Tags tags) {
-        this.tags = tags;
-    }
-
     public String getImg_url() {
         return img_url;
     }
@@ -73,5 +67,12 @@ public class Articles {
     public void setImg_url(String img_url) {
         this.img_url = img_url;
     }
-}
 
+    public List<Tags> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Tags> tags) {
+        this.tags = tags;
+    }
+}

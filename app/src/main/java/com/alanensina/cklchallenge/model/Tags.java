@@ -2,22 +2,22 @@ package com.alanensina.cklchallenge.model;
 
 public class Tags {
 
-    private int id;
+    private String id;
     private String label;
-
-    public Tags(int id, String label) {
-        this.id = id;
-        this.label = label;
-    }
 
     public Tags() {
     }
 
-    public int getId() {
+    public Tags(String id, String label) {
+        this.id = id;
+        this.label = label;
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -28,5 +28,4 @@ public class Tags {
     public void setLabel(String label) {
         this.label = label;
     }
-
 }

@@ -3,10 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="180dp"
     android:layout_marginTop="5dp"
     android:padding="8dp"
-    android:background="#fff">
+    android:background="#fff"
+    android:id="@+id/container"
+    >
 
     <ImageView
         android:layout_width="100dp"
@@ -16,48 +18,50 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:orientation="vertical"
-        android:layout_margin="8dp">
+        android:layout_height="154dp"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
 
 
         <TextView
+            android:id="@+id/article_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/article_title"
             android:text="Article Title"
-            android:textStyle="bold"
             android:textColor="@color/colorPrimary"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/article_authors"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Authors"
-            android:textStyle="italic"
-            android:id="@+id/article_authors"/>
-        
+            android:textStyle="italic" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/article_website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Website"
-            android:textStyle="italic"/>
+            android:textStyle="italic" />
 
+
+        <!--
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/article_category"
-            android:text="Category"
-            android:textStyle="italic"/>
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Category"
+            android:textStyle="italic" />
+-->
+        <TextView
             android:id="@+id/article_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Date"
-            android:textStyle="italic"/>
+            android:textStyle="italic" />
 
-        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
